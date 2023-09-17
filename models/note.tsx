@@ -7,7 +7,19 @@ type Note_Schema = {
   timestamps: true;
 };
 
-const noteSchema = new Schema(
+// const noteSchema = new Schema(
+//   {
+//     title: String,
+//     description: String,
+//     isDone: Boolean,
+//   },
+//   {
+//     timestamps: true,
+//   }
+// );
+
+// schema with Note_Schema type and timestamps set to true
+const noteSchema = new Schema<Note_Schema>(
   {
     title: String,
     description: String,
