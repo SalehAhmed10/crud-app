@@ -10,8 +10,10 @@ interface NoteType {
 }
 
 const getTopic = async () => {
+  const apiUrl = process.env.API_URL;
+
   try {
-    const res = await fetch("http://localhost:3000/api/notes", {
+    const res = await fetch(`${apiUrl}/api/notes`, {
       cache: "no-store",
     });
 
